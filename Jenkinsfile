@@ -6,16 +6,15 @@ pipeline {
                 docker {
                     image 'node:18-alphine'
                 }
-
-                steps {
-                    sh ''' 
-                        echo "building the project"
-                        npm --version
-                        node --version
-                        npm build
-                    '''
-                }
             }
+            steps {
+                sh ''' 
+                    echo "building the project"
+                    npm --version
+                    node --version
+                    npm build
+                '''
+                }
         }
     }
 }
